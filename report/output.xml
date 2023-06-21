@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on darwin)" generated="20230607 14:11:48.445" rpa="false" schemaversion="3">
+<suite id="s1" name="TC registration" source="/Users/o_khoa.n/Desktop/kuniv-test-ui/testcase/TC_registration.robot">
+<test id="s1-t1" name="TC_LOG_IN_01 - registration" line="6">
+<kw name="Open app" library="logIn">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=11</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=com.example.kstudent</arg>
+<arg>appActivity=com.example.kstudent.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230607 14:11:50.784" endtime="20230607 14:11:59.122"/>
+</kw>
+<status status="PASS" starttime="20230607 14:11:50.784" endtime="20230607 14:11:59.122"/>
+</kw>
+<kw name="Login" library="logIn">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${LOGIN_USER}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230607 14:11:59.613" level="INFO">xpath criteria: //android.widget.EditText[@index='1']</msg>
+<status status="PASS" starttime="20230607 14:11:59.123" endtime="20230607 14:11:59.613"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN_USER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230607 14:11:59.616" level="INFO">Clicking element '//android.widget.EditText[@index='1']'.</msg>
+<msg timestamp="20230607 14:11:59.681" level="INFO">xpath criteria: //android.widget.EditText[@index='1']</msg>
+<status status="PASS" starttime="20230607 14:11:59.614" endtime="20230607 14:11:59.681"/>
+</kw>
+<kw name="Wait Activity" library="AppiumLibrary">
+<arg>.MainActivity</arg>
+<arg>3</arg>
+<doc>Wait for an activity: block until target activity presents
+or time out.</doc>
+<status status="PASS" starttime="20230607 14:11:59.681" endtime="20230607 14:11:59.847"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_USER}</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230607 14:11:59.850" level="INFO">Typing text 'student01' into text field '//android.widget.EditText[@index='1']'</msg>
+<msg timestamp="20230607 14:12:00.744" level="INFO">xpath criteria: //android.widget.EditText[@index='1']</msg>
+<status status="PASS" starttime="20230607 14:11:59.847" endtime="20230607 14:12:00.744"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN_PASS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230607 14:12:00.745" level="INFO">Clicking element '//android.widget.EditText[@index='2']'.</msg>
+<msg timestamp="20230607 14:12:02.079" level="INFO">xpath criteria: //android.widget.EditText[@index='2']</msg>
+<status status="PASS" starttime="20230607 14:12:00.744" endtime="20230607 14:12:02.079"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_PASS}</arg>
+<arg>${PASS}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230607 14:12:02.083" level="INFO">Typing text '123456' into text field '//android.widget.EditText[@index='2']'</msg>
+<msg timestamp="20230607 14:12:02.152" level="INFO">xpath criteria: //android.widget.EditText[@index='2']</msg>
+<status status="PASS" starttime="20230607 14:12:02.080" endtime="20230607 14:12:02.152"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230607 14:12:02.156" level="INFO">Clicking element '//android.widget.Button[@content-desc="Login"]'.</msg>
+<msg timestamp="20230607 14:12:04.561" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Login"]</msg>
+<status status="PASS" starttime="20230607 14:12:02.152" endtime="20230607 14:12:04.561"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${HOME}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20230607 14:12:04.603" level="INFO">Current page contains element '//android.view.View[@index='14']'.</msg>
+<msg timestamp="20230607 14:12:04.604" level="INFO">xpath criteria: //android.view.View[@index='14']</msg>
+<status status="PASS" starttime="20230607 14:12:04.562" endtime="20230607 14:12:04.604"/>
+</kw>
+<status status="PASS" starttime="20230607 14:11:59.122" endtime="20230607 14:12:04.604"/>
+</kw>
+<kw name="Wait Activity" library="AppiumLibrary">
+<arg>.MainActivity</arg>
+<arg>3</arg>
+<doc>Wait for an activity: block until target activity presents
+or time out.</doc>
+<status status="PASS" starttime="20230607 14:12:04.604" endtime="20230607 14:12:04.795"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${registration}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230607 14:12:04.799" level="INFO">Clicking element '//android.view.View[@index='2']'.</msg>
+<msg timestamp="20230607 14:12:04.869" level="INFO">xpath criteria: //android.view.View[@index='2']</msg>
+<status status="PASS" starttime="20230607 14:12:04.796" endtime="20230607 14:12:04.869"/>
+</kw>
+<status status="PASS" starttime="20230607 14:11:50.783" endtime="20230607 14:12:04.871"/>
+</test>
+<status status="PASS" starttime="20230607 14:11:48.448" endtime="20230607 14:12:04.872"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC registration">TC registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
